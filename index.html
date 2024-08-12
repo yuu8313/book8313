@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ブックマークレット置き場</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="code-container">
+            <div class="description">ブックマークレット置き場だよ～</div>
+            <div class="description">いろんなやつがあるからいろいろ試してみてね</div>
+        </div>
+
+        <div class="code-container">
+            <pre class="code-box" id="code1">
+<code>javascript:(function() {var source = document.documentElement.outerHTML; var newWindow = window.open(); newWindow.document.write('&lt;pre&gt;' + source.replace(/&lt;/g, '&amp;lt;').replace(/&gt;/g, '&amp;gt;') + '&lt;/pre&gt;');})();</code>
+            </pre>
+            <button class="copy-button" onclick="copyCode('code1')">コピー</button>
+            <div class="description">ページのソースコードを表示するブックマークレット</div>
+        </div>
+        
+        <div class="code-container">
+            <pre class="code-box" id="code2">
+<code>javascript:(function() {var css = 'html { filter: invert(1) hue-rotate(180deg); } img, video { filter: invert(1) hue-rotate(180deg); }'; var head = document.getElementsByTagName('head')[0]; var style = document.createElement('style'); style.type = 'text/css'; style.appendChild(document.createTextNode(css)); head.appendChild(style);})();</code>
+            </pre>
+            <button class="copy-button" onclick="copyCode('code2')">コピー</button>
+            <div class="description">疑似ダークモードにできるブックマークレット</div>
+        </div>
+
+        <!-- 新しいコードボックスを追加 -->
+        <div class="code-container">
+            <pre class="code-box" id="code3">
+<code>javascript:window.print();</code>
+            </pre>
+            <button class="copy-button" onclick="copyCode('code3')">コピー</button>
+            <div class="description">ページを印刷できるブックマークレット</div>
+        </div>
+
+        <div class="code-container">
+            <pre class="code-box" id="code4">
+<code>javascript:(function() {document.body.style.fontSize = 'larger';})();</code>
+            </pre>
+            <button class="copy-button" onclick="copyCode('code4')">コピー</button>
+            <div class="description">fontを大きくするブックマークレット</div>
+        </div>
+
+        <div class="code-container">
+            <div class="description">ここからしばらくネタ系だよ～</div>
+            <div class="description">たのしんでね</div>
+        </div>
+        
+        <div class="code-container">
+            <pre class="code-box" id="code6">
+<code>javascript:(function() {document.body.style.transform = 'rotate(180deg)';})();</code>
+            </pre>
+            <button class="copy-button" onclick="copyCode('code6')">コピー</button>
+            <div class="description">ページ全体を180度回転させるブックマークレット</div>
+        </div>
+
+        <div class="code-container">
+            <pre class="code-box" id="code7">
+<code>javascript:(function() {document.body.style.transform = 'scaleX(-1)';})();</code>
+            </pre>
+            <button class="copy-button" onclick="copyCode('code7')">コピー</button>
+            <div class="description">ページを左右反転するブックマークレット</div>
+        </div>
+
+        <div class="code-container">
+            <pre class="code-box" id="code8">
+<code>javascript:(function() {document.body.style.filter = 'invert(1)';})();</code>
+            </pre>
+            <button class="copy-button" onclick="copyCode('code8')">コピー</button>
+            <div class="description">ページの色を回転させるブックマークレット</div>
+        </div>
+
+        <div class="code-container">
+            <pre class="code-box" id="code9">
+<code>javascript:(function() {var imgs = document.getElementsByTagName('img'); for (var i = 0; i < imgs.length; i++) { imgs[i].style.animation = 'spin 2s infinite linear'; } var css = '@keyframes spin { 100% { transform: rotate(360deg); } }'; var style = document.createElement('style'); style.type = 'text/css'; style.appendChild(document.createTextNode(css)); document.head.appendChild(style);})();</code>
+            </pre>
+            <button class="copy-button" onclick="copyCode('code9')">コピー</button>
+            <div class="description">画像を回転させるブックマークレット</div>
+        </div>
+
+        <div class="code-container">
+            <pre class="code-box" id="code10">
+<code>javascript:(function() {var elements = document.getElementsByTagName('*'); for (var i = 0; i < elements.length; i++) { elements[i].style.color = '#'+Math.floor(Math.random()*16777215).toString(16); }});</code>
+            </pre>
+            <button class="copy-button" onclick="copyCode('code10')">コピー</button>
+            <div class="description">テキストの色をランダムに変化させるブックマークレット</div>
+        </div>
+
+        <div class="code-container">
+            <pre class="code-box" id="code11">
+<code>javascript:(function() {document.body.style.backgroundColor = '#'+Math.floor(Math.random()*16777215).toString(16);})();</code>
+            </pre>
+            <button class="copy-button" onclick="copyCode('code11')">コピー</button>
+            <div class="description">背景色をランダムに変えるブックマークレット</div>
+        </div>
+
+        <div class="code-container">
+            <pre class="code-box" id="code12">
+<code>javascript:(function(){var e=document.body.getElementsByTagName('*');setInterval(function(){for(var i=0;i<e.length;i++){if(e[i].childNodes.length==1&&e[i].childNodes[0].nodeType==3){e[i].style.position='relative';e[i].style.top=Math.random()*10-5+'px';}}},100);})();</code>
+
+            </pre>
+            <button class="copy-button" onclick="copyCode('code12')">コピー</button>
+            <div class="description">テキストをランダムでジャンプさせるブックマークレット</div>
+        </div>
+
+        <div class="code-container">
+            <pre class="code-box" id="code13">
+<code>javascript:(function(){var t=document.body.innerHTML;var e='%F0%9F%98%80%F0%9F%98%81%F0%9F%98%82%F0%9F%A4%A3%F0%9F%98%83%F0%9F%98%84%F0%9F%98%85%F0%9F%98%86%F0%9F%98%89%F0%9F%98%8A%F0%9F%98%8B%F0%9F%98%8E%F0%9F%98%8D%F0%9F%98%98%F0%9F%A5%B0%F0%9F%98%97%F0%9F%98%99%F0%9F%98%9A%E2%98%BA%EF%B8%8F%F0%9F%99%82%F0%9F%A4%97%F0%9F%A4%A9%F0%9F%A4%94%F0%9F%A4%A8%F0%9F%98%90%F0%9F%98%91%F0%9F%98%B6%F0%9F%99%84%F0%9F%98%8F%F0%9F%98%A3%F0%9F%98%A5%F0%9F%98%AE%F0%9F%A4%90%F0%9F%98%AF%F0%9F%98%AA%F0%9F%98%AB%F0%9F%98%B4%F0%9F%98%8C%F0%9F%98%9B%F0%9F%98%9C%F0%9F%98%9D%F0%9F%A4%A4%F0%9F%98%92%F0%9F%98%93%F0%9F%98%94%F0%9F%98%95%F0%9F%99%83%F0%9F%A4%91%F0%9F%98%B2%E2%98%B9%EF%B8%8F%F0%9F%99%81%F0%9F%98%96%F0%9F%98%9E%F0%9F%98%9F%F0%9F%98%A4%F0%9F%98%A2%F0%9F%98%AD%F0%9F%98%A6%F0%9F%98%A7%F0%9F%98%A8%F0%9F%98%A9%F0%9F%A4%AF%F0%9F%98%AC%F0%9F%98%B0%F0%9F%98%B1%F0%9F%A5%B5%F0%9F%A5%B6%F0%9F%98%B3%F0%9F%A4%AA%F0%9F%98%B5%F0%9F%98%A1%F0%9F%98%A0%F0%9F%A4%AC%F0%9F%98%B7%F0%9F%A4%92%F0%9F%A4%95%F0%9F%A4%A2%F0%9F%A4%AE%F0%9F%A4%A7%F0%9F%98%87%F0%9F%A4%A0%F0%9F%A5%B3%F0%9F%A5%B4%F0%9F%A5%BA%F0%9F%A4%A5%F0%9F%A4%AB%F0%9F%A4%AD%F0%9F%A7%90%F0%9F%A4%93';document.body.innerHTML=t.replace(/\S/g,function(){return e[Math.floor(Math.random()*e.length)]});})()</code>
+
+            </pre>
+            <button class="copy-button" onclick="copyCode('code13')">コピー</button>
+            <div class="description">テキストをランダムな絵文字に置き換えるブックマークレット</div>
+        </div>
+
+        <div class="code-container">
+            <div class="description">検索エンジン系だよ～</div>
+　　　  <div class="description">使い方は検索したい文字を選択してボタンを押してね</div>
+        </div>
+
+        <div class="code-container">
+            <pre class="code-box" id="code14">
+<code>javascript:(function() { var text = window.getSelection().toString(); if (text) { window.open('https://www.google.com/search?q=' + encodeURIComponent(text)); } else { alert('テキストを選択してください'); }})();</code>
+
+
+            </pre>
+            <button class="copy-button" onclick="copyCode('code14')">コピー</button>
+            <div class="description">Googleで検索</div>
+        </div>
+
+        <div class="code-container">
+            <pre class="code-box" id="code15">
+<code>javascript:(function() { var text = window.getSelection().toString(); if (text) { window.open('https://www.bing.com/search?q=' + encodeURIComponent(text)); } else { alert('テキストを選択してください'); }})();</code>
+
+            </pre>
+            <button class="copy-button" onclick="copyCode('code15')">コピー</button>
+            <div class="description">Bingで検索</div>
+        </div>
+
+        <div class="code-container">
+            <pre class="code-box" id="code16">
+<code>javascript:(function() { var text = window.getSelection().toString(); if (text) { window.open('https://search.yahoo.co.jp/search?p=' + encodeURIComponent(text)); } else { alert('テキストを選択してください'); }})();</code>
+
+
+            </pre>
+            <button class="copy-button" onclick="copyCode('code16')">コピー</button>
+            <div class="description">Yahoo! Japanで検索</div>
+        </div>
+
+        <div class="code-container">
+            <pre class="code-box" id="code17">
+<code>javascript:(function() { var text = window.getSelection().toString(); if (text) { window.open('https://duckduckgo.com/?q=' + encodeURIComponent(text)); } else { alert('テキストを選択してください'); }})();</code>
+
+
+            </pre>
+            <button class="copy-button" onclick="copyCode('code17')">コピー</button>
+            <div class="description"> DuckDuckGoで検索</div>
+        </div>
+
+        <div class="code-container">
+            <pre class="code-box" id="code18">
+<code>javascript:(function() { var selectedText = window.getSelection().toString(); if (selectedText) { var encodedText = encodeURIComponent(selectedText); window.open('https://www.perplexity.ai/?q=' + encodedText, '_blank'); } else { alert('テキストを選択してください'); }})();</code>
+
+
+            </pre>
+            <button class="copy-button" onclick="copyCode('code18')">コピー</button>
+            <div class="description">perplexityで検索</div>
+        </div>
+
+        <div class="code-container">
+            <pre class="code-box" id="code19">
+<code>javascript:(function() { var text = window.getSelection().toString(); if (text) { window.open('https://search.brave.com/search?q=' + encodeURIComponent(text)); } else { alert('テキストを選択してください'); }})();</code>
+
+
+            </pre>
+            <button class="copy-button" onclick="copyCode('code19')">コピー</button>
+            <div class="description">Brave searchで検索</div>
+        </div>
+
+        <div class="code-container">
+            <pre class="code-box" id="code20">
+<code>javascript:(function() { var text = window.getSelection().toString(); if (text) { window.open('https://dictionary.goo.ne.jp/srch/all/' + encodeURIComponent(text) + '/m0u/'); } else { alert('テキストを選択してください'); }})();</code>
+
+
+            </pre>
+            <button class="copy-button" onclick="copyCode('code20')">コピー</button>
+            <div class="description">goo辞書で記事を検索</div>
+        </div>
+
+        <div class="code-container">
+            <pre class="code-box" id="code21">
+<code>javascript:(function() { var text = window.getSelection().toString(); if (text) { window.open('https://dic.nicovideo.jp/a/' + encodeURIComponent(text)); } else { alert('テキストを選択してください'); }})();</code>
+
+
+            </pre>
+            <button class="copy-button" onclick="copyCode('code21')">コピー</button>
+            <div class="description">ニコニコ百科事典で記事を検索</div>
+        </div>
+
+        <div class="code-container">
+            <pre class="code-box" id="code22">
+<code>javascript:(function() { var text = window.getSelection().toString(); if (text) { window.open('https://dic.pixiv.net/search?query=' + encodeURIComponent(text)); } else { alert('テキストを選択してください'); }})();</code>
+
+
+            </pre>
+            <button class="copy-button" onclick="copyCode('code22')">コピー</button>
+            <div class="description">pixiv百科事典で記事を検索</div>
+        </div>
+
+        <div class="code-container">
+            <pre class="code-box" id="code23">
+<code>javascript:(function() { var text = window.getSelection().toString(); if (text) { window.open('https://ja.wikipedia.org/wiki/' + encodeURIComponent(text)); } else { alert('テキストを選択してください'); }})();</code>
+
+
+            </pre>
+            <button class="copy-button" onclick="copyCode('code23')">コピー</button>
+            <div class="description">Wikipediaで記事を検索</div>
+        </div>
+
+        <div class="code-container">
+            <pre class="code-box" id="code24">
+<code>javascript:(function() { var text = window.getSelection().toString(); if (text) { var encodedText = encodeURIComponent(text); window.open('https://www.youtube.com/results?search_query=' + encodedText); } else { alert('テキストを選択してください'); }})();</code>
+
+
+            </pre>
+            <button class="copy-button" onclick="copyCode('code24')">コピー</button>
+            <div class="description">youtubeで動画を検索</div>
+        </div>
+
+        <div class="code-container">
+            <pre class="code-box" id="code25">
+<code>javascript:(function() { var text = window.getSelection().toString(); if (text) { var encodedText = encodeURIComponent(text); window.open('https://www.nicovideo.jp/search/' + encodedText); } else { alert('テキストを選択してください'); }})();</code>
+
+
+            </pre>
+            <button class="copy-button" onclick="copyCode('code25')">コピー</button>
+            <div class="description">ニコニコ動画で動画を検索</div>
+        </div>
+
+        <div class="code-container">
+            <pre class="code-box" id="code26">
+<code>javascript:(function() { var text = window.getSelection().toString(); if (text) { window.open('https://www.amazon.co.jp/s?k=' + encodeURIComponent(text)); } else { alert('テキストを選択してください'); }})();</code>
+
+
+            </pre>
+            <button class="copy-button" onclick="copyCode('code26')">コピー</button>
+            <div class="description">Amazonで商品検索</div>
+        </div>
+
+        <div class="code-container">
+            <pre class="code-box" id="code27">
+<code>javascript:(function() { var text = window.getSelection().toString(); if (text) { window.open('https://search.rakuten.co.jp/search/mall/' + encodeURIComponent(text)); } else { alert('テキストを選択してください'); }})();</code>
+
+
+            </pre>
+            <button class="copy-button" onclick="copyCode('code27')">コピー</button>
+            <div class="description">楽天で商品検索</div>
+        </div>
+
+        <div class="code-container">
+            <pre class="code-box" id="code28">
+<code>javascript:(function() { var text = window.getSelection().toString(); if (text) { window.open('https://open.spotify.com/search/' + encodeURIComponent(text)); } else { alert('テキストを選択してください'); }})();</code>
+
+
+            </pre>
+            <button class="copy-button" onclick="copyCode('code28')">コピー</button>
+            <div class="description">Spotifyで楽曲検索</div>
+        </div>
+
+        <div class="code-container">
+          
+
+            <div class="description">随時追加します。</div>
+        </div>
+        <!-- さらにコードボックスを追加する時は上の要素をコピーしてIDと説明を変更する -->
+　　 
+
+
+ <!--         <div class="code-container">
+            <pre class="code-box" id="code24">
+<code></code>
+
+            </pre>
+            <button class="copy-button" onclick="copyCode('code24')">コピー</button>
+            <div class="description">あ</div>
+        </div> -->
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
